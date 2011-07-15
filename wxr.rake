@@ -29,7 +29,7 @@ task :export => :environment do
             xml.title a.title
             xml.content(:encoded) { |x| x << a.body_html }
             xml.pubDate a.published_at.rfc2822
-            xml.guid "urn:uuid:#{UUID.random_create}", "isPermaLink" => "false"
+            xml.guid "urn:uuid:#{UUIDTools::UUID.random_create}", "isPermaLink" => "false"
             author = a.user.login
             xml.author author
             xml.dc :creator, author
