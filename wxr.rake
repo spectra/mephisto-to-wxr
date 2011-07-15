@@ -20,6 +20,7 @@ task :export => :environment do
       xml.title site.title
       xml.link "http://#{site.host}"
       xml.language "en-us"
+      xml.wp :wxr_version, "1.0"
       xml.ttl "40"
       xml.description site.subtitle
   
